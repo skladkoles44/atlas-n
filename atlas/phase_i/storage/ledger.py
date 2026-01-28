@@ -1,26 +1,29 @@
-﻿from __future__ import annotations
-
-import hashlib
+﻿import hashlib
 import json
 from pathlib import Path
-from typing import Tuple
 
-from atlas.phase_i.core.types import ExperimentRecord
+from ..core.types import ExperimentRecord
 
 
 class AppendOnlyLedger:
-    """I-02.01: Append-only хранилище.
-    Сознательно не имеет delete/update API.
+    """
+    I-02.01: Append-only хранилище.
+    Контракт: append(record) -> content_hash (str)
+    Файл: <content_hash>.json
     """
 
-    def __init__(self, storage_dir: Path):
-        self.storage_dir = storage_dir
-        self.storage_dir.mkdir(parents=True, exist_ok=True)
+    def __init__(self, storage_path: Path):
+        self.storage_path = Path(storage_path)
+        self.storage_path.mkdir(parents=True, exist_ok=True)
 
-    def append(self, record: ExperimentRecord) -> Tuple[str, Path]:
-        payload = json.dumps(record.to_dict(), ensure_ascii=False, sort_keys=True, indent=2)
-        digest = hashlib.sha256(payload.encode("utf-8")).hexdigest()
-        path = self.storage_dir / f"{digest}.json"
-        if not path.exists():
-            path.write_text(payload, encoding="utf-8")
-        return digest, path
+    def append(self, record: ExperimentRecord) -> str:
+        record_dict = record.to_dict()
+        record_json = json.dumps(record_dict, sort_keys=True, ensure_ascii=False)
+        content_hash = hashlib.sha256(record_json.encode("utf-8")).hexdigest()
+
+        file_path = self.storage_path / f"{content_hash}.json"
+        if file_path.exists():
+            return content_hash  # идемпотентно
+
+        file_path.write_text(record_json, encoding="utf-8")
+        return content_hash
