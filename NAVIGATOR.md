@@ -8,22 +8,38 @@ Nothing here is dogma. Everything is provisional, revisable, and allowed to be w
 - ATLAS N (EN): papers/atlas-n/ATLAS_N_EN.md
 - ATLAS N (RU): papers/atlas-n/ATLAS_N_RU.md
 
-## How to add new material
-Rules:
-1) One file = one idea (or one tightly scoped chunk).
-2) Prefer meaningful filenames over dates (use dates only when it matters).
-3) Every file starts with:
-   - Status: sketch | hypothesis | tested | falsified | abandoned
-   - Confidence: low | medium | high
-4) Link related ideas explicitly (use relative links).
-5) If an idea is wrong, keep it: mark Status=falsified and add a short note.
+## Canon: how we store ideas
+Core rule: one topic = one directory. Each topic may contain N files (multiple thoughts about the same thing).
 
-## Suggested layout (when we expand beyond papers/)
-- ideas/        (short notes, one-per-file)
-- models/       (formal sketches, invariants, math)
-- failures/     (postmortems, breakages, lessons)
-- philosophy/   (meta-level constraints and uncomfortable truths)
-- archive/      (deprecated or superseded material)
+Inside each topic directory:
+- index.md (mandatory): topic overview, current stance, links to all notes
+- notes/*.md (optional): individual notes, one thought per file
+- drafts/*.md (optional): rough fragments
+- archive/*.md (optional): falsified/superseded material (kept for history)
 
-## Notes
-If you are reading this as a public repo: treat it as a lab notebook, not a promise.
+Each note file starts with:
+- Status: sketch | hypothesis | tested | falsified | abandoned
+- Confidence: low | medium | high
+
+## Suggested layout
+- topics/
+  - atlas-n/
+    - index.md
+    - notes/
+  - mvrs/
+    - index.md
+    - notes/
+  - landscape-drift/
+    - index.md
+    - notes/
+- failures/
+  - index.md
+  - cases/
+- philosophy/
+  - index.md
+  - notes/
+- archive/
+  - deprecated/
+
+## Public reading note
+Treat this as a lab notebook, not a promise.
