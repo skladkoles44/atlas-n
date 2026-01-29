@@ -1,7 +1,6 @@
-﻿# Topic Catalog
+﻿# Topic catalog
 
-This file is the routing map for new notes.
-Nothing here is dogma. Topics can be split/merged/renamed.
+Routing map for notes in this repository.
 
 ## topics/atlas-n
 Scope: ATLAS N methodology, exploration of configuration spaces, MVRS as executable canon, Phase separation, reproducibility-as-law, partial observability, structural map (clusters/boundaries/chaos), information-driven experimentation.
