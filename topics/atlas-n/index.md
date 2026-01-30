@@ -21,3 +21,5 @@ Nothing here is dogma. This topic is a lab notebook.
 ## Glossary (local)
 - C×K → O: configuration × context → outcome
 - MVRS: Minimum Viable Rule Set (executable canon)
+
+- topics/atlas-n/notes/HOW_TO_ADD_DATA.md
