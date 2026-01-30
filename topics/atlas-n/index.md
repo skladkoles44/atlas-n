@@ -12,6 +12,7 @@ Nothing here is dogma. This topic is a lab notebook.
 ## Notes (chronological-ish)
 (Empty for now — new notes go into `notes/` and are linked here.)
 
+- topics/atlas-n/notes/skladkoles44-2026-01-30-2.md
 ## Open questions
 - What is the minimal stable “ContextSnapshot” that preserves predictive power?
 - How do we detect landscape drift vs measurement noise?
