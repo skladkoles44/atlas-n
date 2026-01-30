@@ -36,16 +36,30 @@ ATLAS N: topics/atlas-n/index.md
 Если что-то зацепило — форкайте, добавляйте свои мысли/логи/сомнения, присылайте PR.  
 Один я это не вытяну.
 
-
-﻿# Idea Vault
-
+# Idea Vault  
 Not a product. Not documentation. Not a tutorial.
 
-This is an idea vault: thoughts, hypotheses, models, doubts, observations.
+This is an idea vault: thoughts, hypotheses, models, doubts, observations.  
 Code is secondary. Truth lives in the wording.
 
-Nothing in this repository is dogma. Everything here is provisional, revisable, and allowed to be wrong.
+Nothing in this repository is dogma.  
+Everything here is provisional, revisable, and allowed to be wrong.
 
-## Papers (anchors)
-- ATLAS N (EN): papers/atlas-n/ATLAS_N_EN.md
-- ATLAS N (RU): papers/atlas-n/ATLAS_N_RU.md
+### Papers (anchors)
+- ATLAS N (RU): [papers/atlas-n/ATLAS_N_RU.md](papers/atlas-n/ATLAS_N_RU.md)  
+- ATLAS N (EN): [papers/atlas-n/ATLAS_N_EN.md](papers/atlas-n/ATLAS_N_EN.md)
+
+### Canon: how we store ideas
+Core rule: one topic = one directory.  
+Each topic may contain multiple files (different thoughts about the same thing).
+
+### Routing map
+Topic catalog (where to file new material): [topics/_CATALOG.md](topics/_CATALOG.md)
+
+### Inside each topic directory
+- `index.md` (mandatory): topic overview, current stance, links to all notes  
+- `notes/*.md` (optional): individual notes, one thought per file  
+- `drafts/*.md` (optional): rough fragments  
+- `archive/*.md` (optional): falsified/superseded material (kept for history)
+
+### Each note file starts with
