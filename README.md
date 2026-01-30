@@ -62,4 +62,8 @@ Topic catalog (where to file new material): [topics/_CATALOG.md](topics/_CATALOG
 - `drafts/*.md` (optional): rough fragments  
 - `archive/*.md` (optional): falsified/superseded material (kept for history)
 
-### Each note file starts with
+### Public reading note  
+Treat this as a lab notebook, not a promise.
+
+If anything resonates — fork it, add your own thoughts/logs/doubts, send PRs.  
+One person can't pull this alone.
